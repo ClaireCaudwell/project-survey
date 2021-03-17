@@ -7,28 +7,25 @@ We had free reign to choose what our survey should be about, but we were asked t
 4. The site should follow accessibility guidelines. 
 
 ## What I achieved 🏵️
-1. Used React to create different components and the useState hook to submit data inputted by the user which changes the variable state. 
-2. Connect together using props data from the parent component, form.js, to the children components, all the form components and vice versa.
-3. Used the pageSet useState and a comparison statement to set a welcome component, which when the button is pressed (state is made false) allows the user to enter the form and first component of the form.
-4. Used the showFormQuestion state to show the form components in a specific order. This is done by setting the showFormQuestion to 0 and then setting the different form components to a specific number using an if statement in the form of &&. Then when the button is clicked in each form component, the onClick event is triggered ,incrementing the number that's in the showFormQuestion state by 1. This then invokes that form component, that's equal to that number, to be shown.   
-5. Used ternary operators to make a comparison so when the summary is not true then the form is shown. When the summary state is changed to true, when the user clicks on the button, the onSubmit attribute and handleSubmit function is invoked and the summary component is made visible. At the same time as hiding the form component. 
-6. Created 4 different input elements. However I would like to know how to get the text input so it wraps when the users types in the box. I tried using textarea tag rather than input, but this didn't seem to be as good a input box. 
-7. I managed to get some of the accessibility to work. And I ended up using the fieldset and legend tags. This is because I read online that they help with accessibily.
-8. I do however have a few issues with accessibility, which I want to fix. They are:
-    1. The custom radio buttons and checkboxes aren't selectable despite using the arrows on the keyboard. 
-    2. The button from the previous form component is outlined and read out, despite moving on the next component. 
-    3. When moving to the next component I wan the legend tag be automatically selected, rather than the outlined button. 
-7. Styled the page and made it responsive for mobile, tablet and desktop. 
-8. I can't think of anything else right now, but will update when I remember!
+1. Used React to create different components and the useState hook to submit data inputted by the user and render components dynamically depending if the state is true or false. 
+2. Store data inputted by user using useState and use useState to render components dynamically depending if the state is true or false based on if the user has submitted the specific form or not.
+3. Pass data inputted by the user into the different components rendered via props. With all the data inputted sent to the Summary.js component to render all data inputted by the user.
+4. Used text input, radio buttons(custom), checkboxes(custom) and dropdown input for different questions.
+5. Use onClick event for home button to navigate the user back to the homepage.
+6. Use map method to map through array elements and return a new array of the elements for specifc JSX, used for example on the array of craft beer types.
+7. Implemented basic accessibility for users who use screen readers and keyboards. This includes using semantic HTML, aria-labels and tab-index. 
+8. Used React tooltip library as I was having issues with the required input attribute not showing a message if the user tries to go to the next question before selecting an option from the form. The tooltip gives the user a specific message asking them to take an action. 
+9. I also had to use React useRef hook and the JavaScript focus() method to focus on the input. This was because when the user is using the keyboard to navigate using the tab key and enters a new form the "next question" button is focused on. Targeting the JSX for the form using the useRef in combination with the JavaScript focus() method in the useEffect before the component is mounted allows for the form to be the first thing focused.
+7. Styled the page and made it responsive for mobile, tablet and desktop.
 
 ## What tools 🛠️ I used:
-1. NPM/Node.js
-2. The React starter App that cam included in this project repo
-3. Package.json
-4. React, components and useState Hook
-5. CSS
-6. Very little HTML
-7. Googaling, Technigo videos and lectures
+1. NPM package manager.
+2. The React starter App that cam included in this project repo.
+3. Package.json.
+4. JavaScript, React.js, React useState and useRef hook.
+5. React tooltip.
+5. CSS.
+7. Googaling, Technigo videos and lectures.
 
 ## View it live 💻: 
 https://flamboyant-poitras-c5efb2.netlify.app/

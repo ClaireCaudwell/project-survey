@@ -28,7 +28,6 @@ export const NameForm = () => {
     /*
     Defining the useRef() hook so it can be used in relation to the focus() javascript method when the user clicks onto each new question and the component is mounted. useRef() allows for us to access JSX elements and use javascript method on them. Focus() gives focus to a specific JSX element in this case it is the legend below.
     Using useEffect allows for this to be done when the component is mounted and everytime it's rendered. The reason I use focus() is because I was having issues when using the screen reader and tabIndex didn't work when I applied it to the specific part of the page I wanted the screen reader to focus on when the page is rendered i.e. the legend. Instead it was focusing on the next question button.
-
     */
    const legendToBeFocused = useRef(null);
 
